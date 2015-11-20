@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+  <body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="global.js"></script>
+    <h1>Customer Table</h1>
+    <form action="view.php" method="get">
+      <input type="submit" class="button" name="view" value="view">
+      <br>
+      <br>
+      <table id="customer-table">
+      </table>
+    </form>
+    <form action="add.php" method="post">
+      <h2>Add new Customer</h2>
+      <p>Name:</p>
+      <input type="text" id="customername" />
+      <p>Contact Name:</p>
+      <input type="text" id="contactname" />
+      <p>Address:</p>
+      <input type="text" id="address" />
+      <p>City:</p>
+      <input type="text" id="city" />
+      <p>Postal Code:</p>
+      <input type="text" id="postalcode"/>
+      <p>Country:</p>
+      <input type="text" id="country"/>
+      <br>
+      <input type="submit" class="button" name="add" value="add">
+    </form>
+  </body>
+</html>

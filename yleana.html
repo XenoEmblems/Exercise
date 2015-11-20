@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="select.js" type="text/javascript">
+    </script>
+    <?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+?>
+</head>
+<body>
+  <div>
+    <div>
+      <div>
+        <h1>Yleana Coding Exercise</h1>
+        <p>This exercise will be distributed to potential applicants for the software developer position at Yleana.</p>
+        <div>
+            <div>
+                <h2>User stories</h2> 
+                <p>1. As a developer, I would like a utility, triggered by a button click, which reads 
+                information with an ajax call from an SQL table called "Customers" and 
+        display it to the user in tabular format. 
+        This will let end-user see all the customers inside its database.</p>
+        
+                <p>2. As a developer, I would like a utility, triggered by a button click, which writes 
+                    information with an ajax call to an SQL table called "Customers". 
+                    This will let end-user add new customers to its database.
+                </p>
+            </div>
+            <div>
+                <h2>Requirements</h2> 
+                <h4>Please be sure to read and implement <em>all of the requirements</em> in full.</h4>
+                
+                <ul>
+                        <li>Initially, your "Customers" table should look like the table below (table name, column name and data)</li>
+                        <li>knockout ko.mapping for data-binding</li>
+                        <li>Microsoft SQL Server database</li>
+                        <li>For validation, you should use Knockout Validation</li>
+                    </ul> 
+               
+
+                
+                <p>
+                    <h3>Table Name: Customers</h3>
+                    <table border="1">
+  <tbody><tr>
+    <th>CustomerID</th>
+    <th>CustomerName</th>
+    <th>ContactName</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>PostalCode</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>1<br><br></td>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Obere Str. 57</td>
+    <td>Berlin</td>
+    <td>12209</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Ana Trujillo Emparedados y helados</td>
+    <td>Ana Trujillo</td>
+    <td>Avda. de la Constitución 2222</td>
+    <td>México D.F.</td>
+    <td>05021</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Antonio Moreno Taquería</td>
+    <td>Antonio Moreno</td>
+    <td>Mataderos 2312</td>
+    <td>México D.F.</td>
+    <td>05023</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>4<br><br></td>
+    <td>Around the Horn</td>
+    <td>Thomas Hardy</td>
+    <td>120 Hanover Sq.</td>
+    <td>London</td>
+    <td>WA1 1DP</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Berguvsvägen 8</td>
+    <td>Luleå</td>
+    <td>S-958 22</td>
+    <td>Sweden</td>
+  </tr>
+</tbody></table>
+                    </p>
+            </div>
+            <div>
+                <h2>Technologies</h2> 
+                <p>
+                    </p><ul>
+                        <li>C#</li>
+                        <li>.NET framework (4.0 or above)</li>
+                        <li><a href="http://ASP.NET" target="_blank">ASP.NET</a> MVC 3 (or higher) or WebForms</li>
+                        <li>Git</li>
+                        <li>SQL Server (or SQL Server Compact Edition)</li>
+                        <li><a href="http://knockoutjs.com/" target="_blank">Knockout</a></li>
+                        <li><a href="https://github.com/Knockout-Contrib/Knockout-Validation" target="_blank">Knockout Validation</a></li>
+                        <li><a href="http://knockoutjs.com/documentation/plugins-mapping.html" target="_blank">Knockout Mapping</a></li>                        
+                    </ul>
+                <p></p>
+            </div>
+            <div>
+                <h2>Resources</h2> 
+                <p>
+                    </p><ul>
+                        <li><a href="https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx" target="_blank">Visual Studio Community</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/sqlserver/editions/2012-editions/compact.aspx" title="SQL Server Compact Edition" target="_blank">SQL Server Compact Edition</a></li>
+                        <li><a href="http://gitextensions.github.io/" title="Git Extensions for Windows" target="_blank">Git Extensions (also installs msysgit)</a></li>
+                        <li><a href="http://igorzelmanovich.blogspot.com/2012/03/setting-up-git-git-extensions-and.html" target="_blank">Crash course on setting up Github on a Windows environment</a></li>
+                        <li><a href="http://knockoutjs.com/downloads/knockout-3.3.0.js" target="_blank">Knockout</a></li>
+                        <li><a href="https://raw.githubusercontent.com/SteveSanderson/knockout.mapping/master/build/output/knockout.mapping-latest.js" target="_blank">Knockout Mapping</a></li>
+                        <li><a href="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.3/knockout.validation.js" target="_blank">Knockout Validation</a></li>
+                    </ul>
+                <p></p>
+            </div>
+        </div>
+        <div>
+            <h3>Initial Instructions/Guidance</h3>
+            <p>
+            </p><ol>
+                <li>Create an account on <a href="http://www.github.com/" title="Github" target="_blank">Github</a></li>
+                <li>Install <a href="http://gitextensions.github.io/" title="Git Extensions for Windows" target="_blank">GitExtensions</a>, <a href="https://git-for-windows.github.io/" title="msysgit" target="_blank">vanilla Git for windows</a>, or <a href="http://windows.github.com/" title="Github for Windows" target="_blank">Github for Windows</a></li>
+                <li>(Optional, not necessary if using Github for Windows) Set up your local machine to <a href="https://help.github.com/articles/generating-ssh-keys" title="SSH connection with Github" target="_blank">allow communicating with Github</a></li>
+                <li>Navigate to the <a href="http://www.github.com/yleana" title="Yleana Github Account" target="_blank">Yleana Github Account</a></li>
+                <li>Select the &quot;Yleana.Exercise&quot; project</li>
+                <li>Click the <a>Fork</a> button (<a href="https://help.github.com/articles/fork-a-repo" title="Forking instructions" target="_blank">Forking instructions</a>)</li>
+                <li>Clone the repository (<a href="http://gitextensions.googlecode.com/files/Git%20Extensions%20-%20User%20Manual.pdf" title="GitExtensions Manual" target="_blank">Git Extensions Manual</a>, also see <a href="https://help.github.com/articles/fork-a-repo" title="Forking instructions" target="_blank">Forking instructions</a>)</li>
+                <li>Code!</li>
+                <li>When finished, push to your Github fork (you can do this as much as you would like to)</li>
+                <li>Perform a <a href="https://help.github.com/articles/creating-a-pull-request" title="Creating a pull request" target="_blank">pull request</a></li>
+            </ol>
+        </div>
+        <div>
+            <h4><em>Feel free to e-mail <a href="mailto:emily@yleana.org" title="Emily Ball" target="_blank">Emily Ball</a> with any questions. Good luck!</em></h4>
+        </div>
+      </div>
+
+    </div>
+</div></body></html>
